@@ -1,0 +1,19 @@
+# dsh-q-image-studio bundle patch: adds the plugin row to the web profile roster.
+# The row is a bare plugin by package name, as every published bundle does
+# (see dsh-taskboard): the loader resolves it from the profile's node_modules,
+# which works for a link: dev install and for the npm package alike.
+# The node half (exports ".") runs in the Host process; the browser half
+# (exports "./client") is bundled by DSH because of
+# the `dsh.client` declaration in package.json.
+- insert:
+    - id: dsh-q-image-studio
+      name: "@u-cha/dsh-q-image-studio"
+      config:
+        providers: []
+        activeProviderId: ""
+        defaultSize: "1024x1024"
+        promptExtend: true
+        watermark: false
+        saveDir: "~/Images/Q-Image-Studio"
+        language: "en"
+        animations: true

@@ -1,0 +1,75 @@
+{
+  "name": "@u-cha/dsh-q-image-studio",
+  "version": "0.1.0",
+  "description": "Q Image Studio — Qwen image generation and editing for DeepSeek Harness: provider profiles, keys in the DSH vault, and a gallery in the Web UI",
+  "license": "MIT",
+  "author": "u-cha",
+  "icon": "icon.png",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "icon.png",
+    "icon.svg",
+    "lib/**/*.js",
+    "lib/**/*.mjs",
+    "lib/vendor/LICENSE-*",
+    "lib/vendor/LICENSE.cosmokit",
+    "lib/vendor/LICENSE.schemastery",
+    "locale/*.json",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "docs/screenshot.jpg",
+    "docs/plugin-page.md",
+    "docs/plugin-page.ru.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "image-generation",
+    "qwen",
+    "dashscope",
+    "openai"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.1": "compatible"
+      }
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/u-cha/dsh-q-image-studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/u-cha/dsh-q-image-studio/issues"
+  },
+  "homepage": "https://github.com/u-cha/dsh-q-image-studio#readme"
+}
