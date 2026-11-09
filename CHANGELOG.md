@@ -4,6 +4,22 @@ All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1-beta.1] - 2026-11-09
+
+### Added
+
+- **Page layout:** Q Image Studio is now a full page in the main area with a studio column, a large result canvas, and a horizontally scrollable history strip.
+- **Lightbox:** click any result to see its prompt, final prompt, model, size, seed, transparency, file and date, with actions to reuse the settings, send it to references, copy the prompt, or reveal it in Finder.
+- **Reference drop zone:** drag images from the history, drop files from Finder, or paste from the clipboard.
+- **Model availability:** a model refused by the provider is marked as unavailable until a call succeeds.
+
+### Changed
+
+- **Prompt guide** opens as a modal reference with a link to the full guide; the inline copy action was removed.
+- **Generation ring:** a thin neon ring and compact progress dots replace the previous full-panel glow.
+- **Errors** show the HTTP status, the provider code, and the provider message instead of a generic failure.
+- **README** is bilingual with a language switch, a real screenshot, and honest notes about the credential vault.
+
 ## [0.1.0] - 2026-11-08
 
 ### Added

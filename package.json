@@ -1,6 +1,6 @@
 {
   "name": "@u-cha/dsh-q-image-studio",
-  "version": "0.1.0",
+  "version": "0.1.1-beta.1",
   "description": "Q Image Studio — Qwen image generation and editing for DeepSeek Harness: provider profiles, keys in the DSH vault, and a gallery in the Web UI",
   "license": "MIT",
   "author": "u-cha",
