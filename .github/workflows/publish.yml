@@ -64,4 +64,11 @@ jobs:
           fi
 
       - name: Publish
-        run: npm publish --access public
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          if [[ "$VERSION" == *-* ]]; then
+            echo "Prerelease $VERSION: publishing under the next tag"
+            npm publish --access public --tag next
+          else
+            npm publish --access public
+          fi
